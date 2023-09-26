@@ -1,0 +1,14 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "Landing page for scss",
+  "main": "index.js",
+  "scripts": {
+   "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "author": "Aamish",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

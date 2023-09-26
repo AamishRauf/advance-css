@@ -1,0 +1,37 @@
+.row{
+    max-width: $grid-width;
+    // background-color: #eee;
+    margin: 0 auto;
+
+   &:not(:last-child){
+        margin-bottom: $gap-v;
+    }
+    @include clearfix;
+    [class^="col-"]{
+        // background-color: orangered;
+        float: left;
+
+        &:not(:last-child){
+            margin-right: $gap-h;
+        }
+    }
+    .col-1-of-2 {
+        width: calc((100% - #{$gap-h}) / 2);
+    
+    }
+    .col-1-of-3{
+        width: calc((100% - 2 * #{$gap-h}) / 3);
+    }
+    .col-2-of-3{
+        width: calc( 2 * ((100% - 2 * #{$gap-h}) / 3) + #{$gap-h});
+    }
+    .col-1-of-4{
+        width: calc((100% - 3 * #{$gap-h}) / 4);
+    }
+    .col-2-of-4{
+        width: calc( 2 * ((100% - 3 * #{$gap-h}) / 4) + #{$gap-h});
+    }
+    .col-3-of-4{
+        width: calc( 3 * ((100% - 3 * #{$gap-h}) / 4) + 2 * #{$gap-h});
+    }
+}
